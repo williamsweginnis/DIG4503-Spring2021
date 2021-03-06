@@ -2,10 +2,11 @@ import React from 'react';
 
 function Pokemon(props){
    return (<div>
-      <p>{props.pokemon.name}</p>
-      <p>{props.pokemon.id}</p>
-      <img src={props.pokemon.sprites.front_default} />
+      <h1>{props.pokemon.name}</h1>
+      <h2>{props.pokemon.id}</h2>
+      <img src={props.pokemon.sprites.front_default}/>
       </div>);
-   
+ 
 }
+
 export default Pokemon;
