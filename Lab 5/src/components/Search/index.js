@@ -6,7 +6,7 @@ import Pokemon from '../Pokemon/index.js';
 function Search(){
   const [search, setSearch] = useState("");
 
-  const [pokemon, setPokemon] = useState({name:"N/A", id:"N/A", sprites:{front_default:null}});
+  const [pokemon, setPokemon] = useState({name:"N/A", id:"N/A", type:"N/A" sprites:{front_default:null}});
 
   const [loading, setLoading] = useState(false);
 
@@ -19,7 +19,7 @@ function Search(){
     })
     .catch(function (error){
       console.log("Error: " + error);
-      setPokemon({name:"Not found", id:"N/A", sprites:{front_default:null}});
+      setPokemon({name:"Not found", id:"N/A", types[0].type.name:"N/A" sprites:{front_default:null}});
     });
   }
     return (<div>
