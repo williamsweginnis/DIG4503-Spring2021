@@ -4,30 +4,28 @@ import CORS from "cors";
     const App = Express();
     const port = 45030;
 
-    App.use(CORS());
-    const names = [
-      'Cortney',
-      'Dewayne',
-      'Trenton',
-      'Pamala',
-      'Ettie',
-      'Errol',
-      'Lorrie',
-      'Hang',
-      'Lauryn',
-      'Caterina',
-      'Isa',
-      'Marcela'
+App.use(CORS());
+const names = [
+ 'Cortney',
+ 'Dewayne',
+  'Trenton',
+ 'Pamala',
+ 'Ettie',
+ 'Errol',
+ 'Lorrie',
+ 'Hang',
+ 'Lauryn',
+ 'Caterina',
+ 'Isa',
+ 'Marcela'
     
   ];
-// PUT = CREATE
   App.put("/people/:person", (req,res) => {
     const name = req.params.person;
     names.push(name);
     res.json({name:name});
   });
 
-// GET = READ
 App.get('/people/:person', (req, res) => {
   let person = req.params.person
   let result = {"name" : "Not found!"};
@@ -45,18 +43,17 @@ App.get('/search/:name', (req, res) => {
 
   let arrayResult = [];
 
-  names.forEach((value) => {
-      if(value.includes(req.params.name)) {
+names.forEach((value) => {
+   if(value.includes(req.params.name)) {
           arrayResult.push(value)
   }
   });
 
-  if(arrayResult.length > 0) {
-      result = {search: arrayResult};
+if(arrayResult.length > 0) {
+   result = {search: arrayResult};
   }
-  res.json(result)
+res.json(result)
 });
-
   App.listen(port, () => {
-    console.log("Server running!");
+    console.log("Server is running!");
   });

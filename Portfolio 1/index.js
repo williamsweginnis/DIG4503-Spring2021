@@ -3,12 +3,12 @@ const chalk = require('chalk');
 const prompt = require('prompt-sync')();
 
 
-var name = '';
-var id = '';
-var type = '';
-var type2 = '';
-var typeColor = '';
-var typeColor2 = '';
+let name = '';
+let id = '';
+let type = '';
+let type2 = '';
+let typeColor = '';
+let typeColor2 = '';
 
 
 const normal = '#A8A77A';
@@ -31,7 +31,7 @@ const steel = '#B7B7CE';
 const fairy = '#D685AD';
  
 
-var userPokemon = prompt('Enter a pokemon: ');
+let userPokemon = prompt('Enter a pokemon: ');
 
 userPokemon = userPokemon.toLowerCase();
 
@@ -44,7 +44,7 @@ axios(api)
         const pokemon = response.data;
         name = pokemon.name;
         id = pokemon.id;
-        type = pokemon.types[0].type.name;
+        type = pokemon.npm uninstall -g create-react-app
 
         if(pokemon.types.length == 2){
           type2 = pokemon.types[1].type.name;
