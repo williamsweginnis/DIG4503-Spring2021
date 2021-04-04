@@ -5,19 +5,19 @@ const url = "mongodb+srv://WilliamSweginnis:tiFspvKXoL1ZXJOV@cluster0.yuzwq.mong
 
 class Database {
     constructor() {
-        // Setup a default value for connection
+
         this.connection = null;
-        // Setup a default value for database
+
         this.database = null;
-        // Setup a default value for collection
+
         this.collection = null;
     }
     async connect() {
-        // Wait for the connect() method to finish.
+
         this.connection = await MongoClient.connect(url, { useUnifiedTopology: true });
-        // Select a database.
+
         this.database = this.connection.db("lab10");
-        // Select a collection.
+
         this.collection = this.database.collection("people"); 
     }
 
@@ -28,7 +28,7 @@ class Database {
                 "favoriteColor": color
             };
             if(this.collection != null) {
-                // Wait for the insertOne() method to finish.
+
                 return await this.collection.insertOne(object);
             }
         }
