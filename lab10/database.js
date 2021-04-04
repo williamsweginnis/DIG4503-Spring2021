@@ -1,6 +1,6 @@
 import MongoClient from 'mongodb';
 
-const url = "mongodb+srv://MarcoCalderon:IjWGuzuhRzU9nPp5@cluster0.yuzwq.mongodb.net";
+const url = "mongodb+srv://WilliamSweginnis:tiFspvKXoL1ZXJOV@cluster0.yuzwq.mongodb.net";
 
 
 class Database {
